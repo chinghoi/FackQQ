@@ -10,10 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--联系人-->
+        <!--View Controller-->
         <scene sceneID="wxA-aK-RR4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Sc-yE-xdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="2JH-jf-Tax" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iup-5M-LjK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -21,15 +20,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iqz-jx-d5R"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="联系人" id="4Rz-mn-fwN"/>
+                    <tabBarItem key="tabBarItem" title="" id="4Rz-mn-fwN"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Sc-yE-xdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1206" y="1268"/>
         </scene>
-        <!--动态-->
+        <!--View Controller-->
         <scene sceneID="RRh-98-DPU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dsP-mQ-0Ck" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="f2e-MV-hPT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gbq-0k-bPP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -37,15 +36,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fPD-N7-i7L"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="动态" id="4PK-8g-6Nc"/>
+                    <tabBarItem key="tabBarItem" title="" id="4PK-8g-6Nc"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsP-mQ-0Ck" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21" y="1268"/>
         </scene>
-        <!--消息-->
+        <!--View Controller-->
         <scene sceneID="Byb-MR-Qre">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uJL-mw-BsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="rqU-EW-3Xt" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LgK-vl-f7c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -53,8 +52,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="r9p-f3-Hgp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="消息" id="hKW-Y2-YdY"/>
+                    <tabBarItem key="tabBarItem" title="" id="hKW-Y2-YdY"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJL-mw-BsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2310" y="1268"/>
         </scene>
@@ -65,14 +65,24 @@
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Egb-4p-ncv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="AC3-qD-aj7" appends="YES" id="fRg-vb-OKa"/>
+                        </connections>
                     </tabBar>
                     <connections>
+                        <outlet property="panRecognizer" destination="AC3-qD-aj7" id="D3P-xM-mOT"/>
                         <segue destination="rqU-EW-3Xt" kind="relationship" relationship="viewControllers" id="ZF3-rK-5aP"/>
                         <segue destination="2JH-jf-Tax" kind="relationship" relationship="viewControllers" id="OoA-cc-s4X"/>
                         <segue destination="f2e-MV-hPT" kind="relationship" relationship="viewControllers" id="cLZ-yz-49z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4M-2J-PhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="AC3-qD-aj7">
+                    <connections>
+                        <action selector="dragGesture:" destination="r7v-om-cdm" id="S3x-gl-ctz"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1204" y="286"/>
         </scene>
