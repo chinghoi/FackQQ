@@ -71,14 +71,13 @@
                         </connections>
                     </tabBar>
                     <connections>
-                        <outlet property="panRecognizer" destination="AC3-qD-aj7" id="D3P-xM-mOT"/>
                         <segue destination="rqU-EW-3Xt" kind="relationship" relationship="viewControllers" id="ZF3-rK-5aP"/>
                         <segue destination="2JH-jf-Tax" kind="relationship" relationship="viewControllers" id="OoA-cc-s4X"/>
                         <segue destination="f2e-MV-hPT" kind="relationship" relationship="viewControllers" id="cLZ-yz-49z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4M-2J-PhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="AC3-qD-aj7">
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="1" id="AC3-qD-aj7">
                     <connections>
                         <action selector="dragGesture:" destination="r7v-om-cdm" id="S3x-gl-ctz"/>
                     </connections>

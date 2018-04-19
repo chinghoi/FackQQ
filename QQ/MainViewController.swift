@@ -10,12 +10,13 @@ import UIKit
 
 
 class MainViewController: UITabBarController {
-//    var fullSize :CGSize!
-//    var myUIView :UIView!
-//    var anotherUIView :UIView!
     
     //状态,控制是否已经选中,选中的话点击tabbar不产生动画
     var tabBarSelected: Int = 0
+    
+    //tabbarimage初始坐标
+    var imageViewLocation: CGPoint = CGPoint(x: 0, y: 0)
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -36,30 +37,6 @@ class MainViewController: UITabBarController {
         item2.selectedImage = #imageLiteral(resourceName: "SelectMoments")
         item2.title = "动态"
 
-//        //获得屏幕尺寸
-//        fullSize = UIScreen.main.bounds.size
-//        // 一个用来移动的 UIView
-//        anotherUIView = UIView(frame: CGRect(x: fullSize.width * 0.5, y: fullSize.height * 0.5, width: 100, height: 100))
-//        //anotherUIView.backgroundColor = UIColor.orange
-//        self.view.addSubview(anotherUIView)
-//
-//        // 拖曳手势
-//        let panRecognizer = UIPanGestureRecognizer(target: self,action: #selector(pan(_:)))
-//
-//        // 最少可以用几个指头拖曳
-//        panRecognizer.minimumNumberOfTouches = 1
-//
-//        // 最多可以用几个指头拖曳
-//        panRecognizer.maximumNumberOfTouches = 1
-//
-//        // 为这个可以移动的 UIView 加上监听手势
-//        anotherUIView.addGestureRecognizer(panRecognizer)
-//    }
-//    // 触发拖拽手势后执行的动作
-//    @objc func pan(_ recognizer: UIPanGestureRecognizer) {
-//        // 設置 UIView 新的位置
-//        let point = recognizer.location(in: self.view)
-//        anotherUIView.center = point
     }
 
     // 当点击tabBar的时候,自动执行该代理方法(不需要手动设置代理)
@@ -74,25 +51,13 @@ class MainViewController: UITabBarController {
                     animation(index: k, tabBar: v)
                     tabBarSelected = k
                 }
-                //获取tabbar图片位置
-                getTabBarButtonImageView(tabBar: item)
-//                let tabBarButton = item.value(forKey: "view") as! UIControl
-//                let tabBarSwappableImageView = tabBarButton.value(forKey: "info") as? UIImageView
-//                print("---------------------------")
-//                print(tabBarSwappableImageView as Any)
             }
         }
     }
     
     // 动画方法
     func animation(index: Int, tabBar: UITabBarItem){
-        //不知为何,无法设置数组类型为UITabBarButton??????所以设置成了Any
-        var tabbarbuttonArray: [Any] = [Any]()
-        for tabBarBtn in self.tabBar.subviews {
-            if tabBarBtn.isKind(of: NSClassFromString("UITabBarButton")!) {
-                tabbarbuttonArray.append(tabBarBtn)
-            }
-        }
+
         //缩放参数
         let pulse = CABasicAnimation(keyPath: "transform.scale")
         pulse.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
@@ -101,61 +66,61 @@ class MainViewController: UITabBarController {
         pulse.autoreverses = true
         pulse.fromValue = 1.0   //开始时的倍率
         pulse.toValue = 0.8     //结束时的倍率
-        // 给tabBarButton添加动画效果
-        let tabBarLayer = (tabbarbuttonArray[index] as AnyObject).layer
-        tabBarLayer?.add(pulse, forKey: nil)
-
-        //根据所选tab设置动画背景
-//        switch index {
-//        case 0:
-//            tabBar.selectedImage = #imageLiteral(resourceName: "SelectMessagesFace")//.withRenderingMode(.alwaysOriginal)//原图渲染,保持原来的色彩,已经在Asset.xcassets中修改,直接使用即可
-//            tabBar.image = #imageLiteral(resourceName: "DidSelectMessagesFace")
-//        case 1:
-//            tabBar.selectedImage = #imageLiteral(resourceName: "SelectContactsFace")
-//            tabBar.image = #imageLiteral(resourceName: "DidSelectContactsFace")
-//        case 2:
-//            tabBar.selectedImage = #imageLiteral(resourceName: "SelectMoments")
-//            tabBar.image = #imageLiteral(resourceName: "DidSelectMoments")
-//        default:
-//            break
-//        }
+        
+        //获取tabbar上的imageView
+        let tabBarButton = tabBar.value(forKey: "view") as! UIControl
+        let tabBarSwappableImageView = tabBarButton.value(forKey: "info") as? UIImageView
+        
+        // 给tabBarButton上的image添加动画效果
+        tabBarSwappableImageView?.layer.add(pulse, forKey: nil)
+        
+        //下面被注释的两行代码表示文字和图片一起动画
+//        let tabBarLayer = (tabbarbuttonArray[index] as AnyObject).layer
+//        tabBarLayer?.add(pulse, forKey: nil)
 
     }
+    
     //添加tabbar拖动手势
-    @IBOutlet var panRecognizer: UIPanGestureRecognizer!
     @IBAction func dragGesture(_ sender: UIPanGestureRecognizer) {
-        let startPoint: CGPoint = panRecognizer.location(in: view)
+        //手指偏移量
         let panGesOffset = sender.translation(in: view)
-        //获取手指位置
+        
+        //获取手指触摸位置
         let location = sender.location(in: view)
         //获取屏幕宽度
         let w_1 = UIScreen.main.bounds.size.width/3
         let w_2 = UIScreen.main.bounds.size.width/3*2
-        if startPoint.x < w_1 {
-            
-            print("第一个格子")
-        } else if startPoint.x > w_1 && startPoint.x < w_2 {
-            print("第二个格子")
-        } else if startPoint.x > w_2 {
-            print("第三个格子")
+        
+        //将取得图片的CGPoint记录到全局变量 imageViewLocation 中
+        imageViewLocation = getTabBarImageView(tabBar: tabBar, item: tabBar.items![0]).center
+        //判断移动哪个 tabView
+        if location.x < w_1 {
+            //这里可能是个玄学代码,没有弄懂为什么 上面的 imageViewLocation 不能和要移动的tabBar.items![x]相同
+            getTabBarImageView(tabBar: tabBar, item: tabBar.items![0]).center = CGPoint(
+                //总之这里要这么写,其他的写法就不能实现功能
+                x: getTabBarImageView(tabBar: tabBar, item: tabBar.items![1]).center.x + panGesOffset.x,
+                y: getTabBarImageView(tabBar: tabBar, item: tabBar.items![1]).center.y + panGesOffset.y)
+        } else if location.x > w_1 && location.x < w_2 {
+            getTabBarImageView(tabBar: tabBar, item: tabBar.items![1]).center = CGPoint(
+                x: imageViewLocation.x + panGesOffset.x,
+                y: imageViewLocation.y + panGesOffset.y)
+        } else if location.x > w_2 {
+            getTabBarImageView(tabBar: tabBar, item: tabBar.items![2]).center = CGPoint(
+                x: imageViewLocation.x + panGesOffset.x,
+                y: imageViewLocation.y + panGesOffset.y)
         }
     }
-    //获取图片view
-    //获取图片view
-    func getTabBarButtonImageView(tabBar: UITabBarItem) {
-        let tabBarButton = tabBar.value(forKey: "view") as! UIControl
-        let tabBarSwappableImageView = tabBarButton.value(forKey: "info") as? UIImageView
-        print("---------------------------")
-        print(tabBarSwappableImageView as Any)
+    //返回一个 UIImageView 类型的 TabBarImageView
+    func getTabBarImageView(tabBar: UITabBar, item: UITabBarItem) -> UIImageView {
+        var tabBarSwappableImageView: UIImageView!
+        // 使用枚举遍历,判断选中的tabBarItem等于数组中的第几个
+        for (_,v) in (tabBar.items?.enumerated())! {
+            if v == item {
+                //获取tabbar上的imageView
+                let tabBarButton = v.value(forKey: "view") as! UIControl
+                tabBarSwappableImageView = tabBarButton.value(forKey: "info") as! UIImageView
+            }
+        }
+        return tabBarSwappableImageView
     }
-//    func getTabBarButtonImageView(withCurrentVc currentViewController: UITabBarController) -> UIImageView? {
-//        let tabBarButton = currentViewController.tabBarItem.value(forKey: "view") as? UIControl
-//        if tabBarButton != nil {
-//            let tabBarSwappableImageView = tabBarButton?.value(forKey: "info") as? UIImageView
-//            if tabBarSwappableImageView != nil {
-//                return tabBarSwappableImageView
-//            }
-//        }
-//        return nil
-//    }
 }
