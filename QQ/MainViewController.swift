@@ -32,7 +32,7 @@ class MainViewController: UITabBarController {
         item0.selectedImage = #imageLiteral(resourceName: "SelectMessagesFace")
         item0.title = "消息"
         let item1: UITabBarItem = tabBar.items![1]
-        item1.image = #imageLiteral(resourceName: "DidSelectContactsFace")
+        item1.image = #imageLiteral(resourceName: "DidSelectContactsLeft")
         item1.selectedImage = #imageLiteral(resourceName: "SelectContactsFace")
         item1.title = "联系人"
         let item2: UITabBarItem = tabBar.items![2]
@@ -47,6 +47,13 @@ class MainViewController: UITabBarController {
         // 使用枚举遍历,判断选中的tabBarItem等于数组中的第几个
         for (k,v) in (tabBar.items?.enumerated())! {
             if v == item {
+                //选中tabbar后,做出相应的图片改变
+                switch k {
+                case 0 : tabBar.items![1].image = #imageLiteral(resourceName: "DidSelectContactsLeft")
+                case 1 : tabBar.items![0].image = #imageLiteral(resourceName: "DidSelectMessagesFace")
+                case 2 : tabBar.items![1].image = #imageLiteral(resourceName: "DidSelectContactsRight")
+                default: break
+                }
                 // 打印选中的iteme下标
                 print(k)
                 // 判断是否第二次点击. 将下标传入动画方法
