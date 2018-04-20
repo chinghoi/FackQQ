@@ -15,6 +15,7 @@
 		E91FFC032082FEEB007BA83B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91FFC012082FEEB007BA83B /* Main.storyboard */; };
 		E91FFC052082FEEC007BA83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91FFC042082FEEC007BA83B /* Assets.xcassets */; };
 		E91FFC082082FEEC007BA83B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91FFC062082FEEC007BA83B /* LaunchScreen.storyboard */; };
+		E923A046208A025300FE826C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923A045208A025300FE826C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E91FFC042082FEEC007BA83B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E91FFC072082FEEC007BA83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E91FFC092082FEEC007BA83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E923A045208A025300FE826C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				E91FFBFD2082FEEB007BA83B /* AppDelegate.swift */,
 				E91FFBFF2082FEEB007BA83B /* MainViewController.swift */,
+				E923A045208A025300FE826C /* LoginViewController.swift */,
 				E90EE67B20833E77000FD3CE /* MessagesView.swift */,
 				E90EE67D20833F6B000FD3CE /* ContactsView.swift */,
 				E90EE67F208340DD000FD3CE /* MomentsView.swift */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E923A046208A025300FE826C /* LoginViewController.swift in Sources */,
 				E90EE67E20833F6B000FD3CE /* ContactsView.swift in Sources */,
 				E91FFC002082FEEB007BA83B /* MainViewController.swift in Sources */,
 				E90EE680208340DD000FD3CE /* MomentsView.swift in Sources */,
