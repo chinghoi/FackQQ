@@ -87,7 +87,12 @@ class MainViewController: UITabBarController {
     @IBAction func dragGesture(_ sender: UIPanGestureRecognizer) {
         //手指偏移量
         let panGesOffset = sender.translation(in: view)
-
+        
+        let a: CGFloat = 0.1
+        let b: CGFloat = 0.05
+        
+        //获取手指触摸位置
+        //let location = sender.location(in: view)
         //获取屏幕宽度
         let w_1 = UIScreen.main.bounds.size.width/3
         let w_2 = UIScreen.main.bounds.size.width/3*2
@@ -104,21 +109,33 @@ class MainViewController: UITabBarController {
                 //这里可能是个玄学代码,没有弄懂为什么 上面的 imageViewLocation 不能和要移动的tabBar.items![x]相同
                 getTabBarImageView(tabBar: tabBar, item: tabBar.items![0]).center = CGPoint(
                     //总之这里要这么写,其他的写法就不能实现功能
-                    x: getTabBarImageView(tabBar: tabBar, item: tabBar.items![1]).center.x + panGesOffset.x,
-                    y: getTabBarImageView(tabBar: tabBar, item: tabBar.items![1]).center.y + panGesOffset.y)
+                    x: getTabBarImageView(tabBar: tabBar, item: tabBar.items![1]).center.x + panGesOffset.x * a,
+                    y: getTabBarImageView(tabBar: tabBar, item: tabBar.items![1]).center.y + panGesOffset.y * b)
             } else if startTabBarLocation.x > w_1 && startTabBarLocation.x < w_2 {
                 getTabBarImageView(tabBar: tabBar, item: tabBar.items![1]).center = CGPoint(
-                    x: imageViewLocation.x + panGesOffset.x,
-                    y: imageViewLocation.y + panGesOffset.y)
+                    x: imageViewLocation.x + panGesOffset.x * a,
+                    y: imageViewLocation.y + panGesOffset.y * b)
             } else if startTabBarLocation.x > w_2 {
                 getTabBarImageView(tabBar: tabBar, item: tabBar.items![2]).center = CGPoint(
-                    x: imageViewLocation.x + panGesOffset.x,
-                    y: imageViewLocation.y + panGesOffset.y)
+                    x: imageViewLocation.x + panGesOffset.x * a,
+                    y: imageViewLocation.y + panGesOffset.y * b)
             }
             print("正在触摸")
             //fallthrough
         //不同于其它语言的switch case，fallthrough表示这个case完成了，它还可以继续下个case，而不是break
         case .ended:
+            //imageView回到原位
+            if startTabBarLocation.x < w_1 {
+                //这里可能是个玄学代码,没有弄懂为什么 上面的 imageViewLocation 不能和要移动的tabBar.items![x]相同
+                getTabBarImageView(tabBar: tabBar, item: tabBar.items![0]).center = CGPoint(
+                    //总之这里要这么写,其他的写法就不能实现功能
+                    x: getTabBarImageView(tabBar: tabBar, item: tabBar.items![1]).center.x,
+                    y: getTabBarImageView(tabBar: tabBar, item: tabBar.items![1]).center.y)
+            } else if startTabBarLocation.x > w_1 && startTabBarLocation.x < w_2 {
+                getTabBarImageView(tabBar: tabBar, item: tabBar.items![1]).center = imageViewLocation
+            } else if startTabBarLocation.x > w_2 {
+                getTabBarImageView(tabBar: tabBar, item: tabBar.items![2]).center = imageViewLocation
+            }
             print("触摸结束")
             break
         default: break
