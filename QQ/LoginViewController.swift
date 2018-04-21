@@ -13,6 +13,12 @@ class LoginViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    //点击空白处隐藏键盘(全局)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //此处 ! 其他界面点击空白处会产生崩溃的bug,故修改接口为 ? (可选),见下方接口处
+        userName.resignFirstResponder()
+        password.resignFirstResponder()
+    }
     //背景图片
     @IBOutlet var background: UIImageView!
     
@@ -48,7 +54,7 @@ class LoginViewController: UIViewController {
         userName.textColor = UIColor.white
         userName.backgroundColor = UIColor.clear
         userName.borderStyle = .none
-        userName.keyboardType = UIKeyboardType.emailAddress
+        userName.keyboardType = UIKeyboardType.numbersAndPunctuation
         userName.clearButtonMode = .whileEditing  //编辑时出现清除按钮
         //添加下划线
         addBorderLine(X: 0, Y: userName.frame.maxY, width: userName.frame.width, height: 0.3, coloer: UIColor.white, layer: userName.layer)
@@ -76,6 +82,10 @@ class LoginViewController: UIViewController {
         loginBtn.alpha = 0.8
 
         
+    }
+    @IBAction func loginBtn(_ sender: UIButton) {
+        userName.resignFirstResponder()
+        password.resignFirstResponder()
     }
     /**
      UIView 扩展画线

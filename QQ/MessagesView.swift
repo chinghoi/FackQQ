@@ -8,9 +8,7 @@
 
 import UIKit
 
-
-//    override func viewDidLoad() {
-//        //初始化tabbar
-//        tabBarItem.selectedImage = #imageLiteral(resourceName: "SelectMessagesFace")
-//    }
+class MessagesView: UIViewController {
+    
+}
 
