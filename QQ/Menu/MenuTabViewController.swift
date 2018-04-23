@@ -1,5 +1,5 @@
 //
-//  MenuViewController.swift
+//  MenuTab.swift
 //  QQ
 //
 //  Created by ChingHoi on 2018/4/23.
@@ -7,9 +7,6 @@
 //
 
 import UIKit
-
-class MenuViewController: UIViewController {
-    override func viewDidLoad() {
-        
-    }
+class MenuTabViewController: UITableViewCell {
+    
 }

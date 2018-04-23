@@ -22,6 +22,13 @@ class MessagesView: UIViewController {
                 print("youhua")
             }
         }
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        //导航栏透明处理
+        //navigationController?.navigationBar.subviews[0].alpha = 0
     }
     @IBAction func menu(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "MenuViewController")
@@ -29,5 +36,10 @@ class MessagesView: UIViewController {
         // 调用这个方法
         cw_showDefaultDrawerViewController(vc)
     }
+}
+//列表菜单
+struct Menu {
+    var ico: UIImage //图标
+    var title: String //功能名称
 }
 

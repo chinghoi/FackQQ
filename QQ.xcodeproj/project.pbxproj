@@ -18,6 +18,7 @@
 		E91FFC082082FEEC007BA83B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91FFC062082FEEC007BA83B /* LaunchScreen.storyboard */; };
 		E923A046208A025300FE826C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923A045208A025300FE826C /* LoginViewController.swift */; };
 		E93E6E0C208D8C2200E58048 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E6E0B208D8C2200E58048 /* MenuViewController.swift */; };
+		E99794A1208DF504009881C2 /* MenuTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99794A0208DF504009881C2 /* MenuTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		E923A045208A025300FE826C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E939F364208CBD6200DC247A /* QQ-Birdging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QQ-Birdging-Header.h"; sourceTree = "<group>"; };
 		E93E6E0B208D8C2200E58048 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E99794A0208DF504009881C2 /* MenuTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,7 @@
 				E91FFBFD2082FEEB007BA83B /* AppDelegate.swift */,
 				E923A045208A025300FE826C /* LoginViewController.swift */,
 				E91FFBFF2082FEEB007BA83B /* MainViewController.swift */,
-				E93E6E0B208D8C2200E58048 /* MenuViewController.swift */,
+				E997949F208DF4D5009881C2 /* Menu */,
 				E93E6E0A208D8A4800E58048 /* TabBarView */,
 				E91FFC012082FEEB007BA83B /* Main.storyboard */,
 				E91FFC062082FEEC007BA83B /* LaunchScreen.storyboard */,
@@ -111,6 +113,15 @@
 				E90EE67F208340DD000FD3CE /* MomentsView.swift */,
 			);
 			path = TabBarView;
+			sourceTree = "<group>";
+		};
+		E997949F208DF4D5009881C2 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				E93E6E0B208D8C2200E58048 /* MenuViewController.swift */,
+				E99794A0208DF504009881C2 /* MenuTabViewController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		FA086A1F47145404DFD41579 /* Frameworks */ = {
@@ -257,6 +268,7 @@
 				E90EE67E20833F6B000FD3CE /* ContactsView.swift in Sources */,
 				E91FFC002082FEEB007BA83B /* MainViewController.swift in Sources */,
 				E93E6E0C208D8C2200E58048 /* MenuViewController.swift in Sources */,
+				E99794A1208DF504009881C2 /* MenuTabViewController.swift in Sources */,
 				E90EE680208340DD000FD3CE /* MomentsView.swift in Sources */,
 				E91FFBFE2082FEEB007BA83B /* AppDelegate.swift in Sources */,
 				E90EE67C20833E77000FD3CE /* MessagesView.swift in Sources */,
@@ -408,7 +420,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BX3Y9SNP5;
 				INFOPLIST_FILE = QQ/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chinghoi888.QQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -425,7 +440,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BX3Y9SNP5;
 				INFOPLIST_FILE = QQ/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chinghoi888.QQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
