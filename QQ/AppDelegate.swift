@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LeanCloud
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //导入基础模块
+        LeanCloud.initialize(applicationID: "IbkJMbgYsOkxB32svTHgUR3g-gzGzoHsz", applicationKey: "lMIt73NJuKrb0nA7vWgrlekJ")
         //将第一个视图作为主视图
         if self.window!.rootViewController as? UITabBarController != nil {
             let tababarController = self.window!.rootViewController as! UITabBarController

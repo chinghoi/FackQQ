@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.7.2)
+  - CWLateralSlide (1.5.9)
+  - LeanCloud (11.0.0):
+    - LeanCloud/Storage (= 11.0.0)
+  - LeanCloud/Storage (11.0.0):
+    - Alamofire (~> 4.5)
+
+DEPENDENCIES:
+  - CWLateralSlide (~> 1.5.9)
+  - LeanCloud (~> 11.0.0)
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  CWLateralSlide: f91ec07f1b8f0d22ebcb661c879b7f91a3e7481d
+  LeanCloud: cb29157ba8f4e948f3476b4503903b7e6da9c260
+
+PODFILE CHECKSUM: d61f78d11251500e1595486049d14de8243410a1
+
+COCOAPODS: 1.4.0

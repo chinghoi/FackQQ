@@ -7,13 +7,13 @@
 //
 
 import UIKit
-
+import LeanCloud
 
 class MainViewController: UITabBarController {
     
     //状态,控制是否已经选中,选中的话点击tabbar不产生动画
     var tabBarSelected: Int = 0
-    
+
     //初始化手指在tabBar触摸的坐标
     var startTabBarLocation: CGPoint = CGPoint(x: 0, y: 0)
     
@@ -25,7 +25,7 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
 
         //设置title字体颜色
-        tabBar.tintColor = UIColor(red: CGFloat(71 / 255.0), green: CGFloat(186 / 255.0), blue: CGFloat(254 / 255.0), alpha: 1)
+        tabBar.tintColor = #colorLiteral(red: 0.2784313725, green: 0.7294117647, blue: 0.9960784314, alpha: 1)
         //初始化tabbar无需使用.alwaysOriginal原图渲染,保持原来的色彩,已经在Asset.xcassets中修改,直接使用即可
         let item0: UITabBarItem = tabBar.items![0]
         item0.image = #imageLiteral(resourceName: "DidSelectMessagesFace")
@@ -41,7 +41,17 @@ class MainViewController: UITabBarController {
         item2.title = "动态"
 
     }
-
+    
+    //判断是否登录
+    override func viewDidAppear(_ animated: Bool) {
+        if LCUser.current == nil {
+            //登录
+            performSegue(withIdentifier: "loginView", sender: self)
+        } else {
+            //刷新
+        }
+    }
+    
     // 当点击tabBar的时候,自动执行该代理方法(不需要手动设置代理)
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         // 使用枚举遍历,判断选中的tabBarItem等于数组中的第几个

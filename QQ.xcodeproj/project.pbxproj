@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56971B77AE25EF8AFF104FB4 /* Pods_QQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA715A9516C6CC99BC454E4 /* Pods_QQ.framework */; };
 		E90EE67C20833E77000FD3CE /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EE67B20833E77000FD3CE /* MessagesView.swift */; };
 		E90EE67E20833F6B000FD3CE /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EE67D20833F6B000FD3CE /* ContactsView.swift */; };
 		E90EE680208340DD000FD3CE /* MomentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EE67F208340DD000FD3CE /* MomentsView.swift */; };
@@ -16,9 +17,13 @@
 		E91FFC052082FEEC007BA83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91FFC042082FEEC007BA83B /* Assets.xcassets */; };
 		E91FFC082082FEEC007BA83B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91FFC062082FEEC007BA83B /* LaunchScreen.storyboard */; };
 		E923A046208A025300FE826C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923A045208A025300FE826C /* LoginViewController.swift */; };
+		E93E6E0C208D8C2200E58048 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E6E0B208D8C2200E58048 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40DAFCBF7FE3A9E3759E91C6 /* Pods-QQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQ.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQ/Pods-QQ.release.xcconfig"; sourceTree = "<group>"; };
+		5AC1908A66D590FC9D3C6978 /* Pods-QQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QQ/Pods-QQ.debug.xcconfig"; sourceTree = "<group>"; };
+		6BA715A9516C6CC99BC454E4 /* Pods_QQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90EE67B20833E77000FD3CE /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		E90EE67D20833F6B000FD3CE /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		E90EE67F208340DD000FD3CE /* MomentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsView.swift; sourceTree = "<group>"; };
@@ -30,6 +35,8 @@
 		E91FFC072082FEEC007BA83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E91FFC092082FEEC007BA83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E923A045208A025300FE826C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E939F364208CBD6200DC247A /* QQ-Birdging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QQ-Birdging-Header.h"; sourceTree = "<group>"; };
+		E93E6E0B208D8C2200E58048 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +44,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56971B77AE25EF8AFF104FB4 /* Pods_QQ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C089F8819C34B7F6BF8F88E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AC1908A66D590FC9D3C6978 /* Pods-QQ.debug.xcconfig */,
+				40DAFCBF7FE3A9E3759E91C6 /* Pods-QQ.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E91FFBF12082FEEB007BA83B = {
 			isa = PBXGroup;
 			children = (
+				E939F363208CBD4500DC247A /* Head */,
 				E91FFBFC2082FEEB007BA83B /* QQ */,
 				E91FFBFB2082FEEB007BA83B /* Products */,
+				C089F8819C34B7F6BF8F88E0 /* Pods */,
+				FA086A1F47145404DFD41579 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,17 +83,42 @@
 			isa = PBXGroup;
 			children = (
 				E91FFBFD2082FEEB007BA83B /* AppDelegate.swift */,
-				E91FFBFF2082FEEB007BA83B /* MainViewController.swift */,
 				E923A045208A025300FE826C /* LoginViewController.swift */,
-				E90EE67B20833E77000FD3CE /* MessagesView.swift */,
-				E90EE67D20833F6B000FD3CE /* ContactsView.swift */,
-				E90EE67F208340DD000FD3CE /* MomentsView.swift */,
+				E91FFBFF2082FEEB007BA83B /* MainViewController.swift */,
+				E93E6E0B208D8C2200E58048 /* MenuViewController.swift */,
+				E93E6E0A208D8A4800E58048 /* TabBarView */,
 				E91FFC012082FEEB007BA83B /* Main.storyboard */,
 				E91FFC062082FEEC007BA83B /* LaunchScreen.storyboard */,
 				E91FFC042082FEEC007BA83B /* Assets.xcassets */,
 				E91FFC092082FEEC007BA83B /* Info.plist */,
 			);
 			path = QQ;
+			sourceTree = "<group>";
+		};
+		E939F363208CBD4500DC247A /* Head */ = {
+			isa = PBXGroup;
+			children = (
+				E939F364208CBD6200DC247A /* QQ-Birdging-Header.h */,
+			);
+			path = Head;
+			sourceTree = "<group>";
+		};
+		E93E6E0A208D8A4800E58048 /* TabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				E90EE67B20833E77000FD3CE /* MessagesView.swift */,
+				E90EE67D20833F6B000FD3CE /* ContactsView.swift */,
+				E90EE67F208340DD000FD3CE /* MomentsView.swift */,
+			);
+			path = TabBarView;
+			sourceTree = "<group>";
+		};
+		FA086A1F47145404DFD41579 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BA715A9516C6CC99BC454E4 /* Pods_QQ.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E91FFC0C2082FEEC007BA83B /* Build configuration list for PBXNativeTarget "QQ" */;
 			buildPhases = (
+				FAF4A32EC51DA111AE4C40DE /* [CP] Check Pods Manifest.lock */,
 				E91FFBF62082FEEB007BA83B /* Sources */,
 				E91FFBF72082FEEB007BA83B /* Frameworks */,
 				E91FFBF82082FEEB007BA83B /* Resources */,
+				05CF498A46441ADDF5FE155F /* [CP] Embed Pods Frameworks */,
+				63745A6B4323EA697B291E03 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,6 +190,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05CF498A46441ADDF5FE155F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QQ/Pods-QQ-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CWLateralSlide/CWLateralSlide.framework",
+				"${BUILT_PRODUCTS_DIR}/LeanCloud/LeanCloud.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CWLateralSlide.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanCloud.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQ/Pods-QQ-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63745A6B4323EA697B291E03 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQ/Pods-QQ-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAF4A32EC51DA111AE4C40DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QQ-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E91FFBF62082FEEB007BA83B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -150,6 +256,7 @@
 				E923A046208A025300FE826C /* LoginViewController.swift in Sources */,
 				E90EE67E20833F6B000FD3CE /* ContactsView.swift in Sources */,
 				E91FFC002082FEEB007BA83B /* MainViewController.swift in Sources */,
+				E93E6E0C208D8C2200E58048 /* MenuViewController.swift in Sources */,
 				E90EE680208340DD000FD3CE /* MomentsView.swift in Sources */,
 				E91FFBFE2082FEEB007BA83B /* AppDelegate.swift in Sources */,
 				E90EE67C20833E77000FD3CE /* MessagesView.swift in Sources */,
@@ -294,16 +401,14 @@
 		};
 		E91FFC0D2082FEEC007BA83B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AC1908A66D590FC9D3C6978 /* Pods-QQ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BX3Y9SNP5;
 				INFOPLIST_FILE = QQ/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chinghoi888.QQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -313,16 +418,14 @@
 		};
 		E91FFC0E2082FEEC007BA83B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40DAFCBF7FE3A9E3759E91C6 /* Pods-QQ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BX3Y9SNP5;
 				INFOPLIST_FILE = QQ/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chinghoi888.QQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

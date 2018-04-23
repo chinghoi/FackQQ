@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LeanCloud
 
 class LoginViewController: UIViewController {
     //隐藏状态栏
@@ -83,9 +84,22 @@ class LoginViewController: UIViewController {
 
         
     }
+
     @IBAction func loginBtn(_ sender: UIButton) {
         userName.resignFirstResponder()
         password.resignFirstResponder()
+
+        if (userName.text != nil) && (password.text != nil) {
+            LCUser.logIn(username: "123", password: "123") { result in
+                switch result {
+                case .success(let user):
+                    self.performSegue(withIdentifier: "mainView", sender: nil)
+                    break
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
     }
     /**
      UIView 扩展画线
