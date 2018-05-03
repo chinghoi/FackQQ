@@ -15,6 +15,7 @@ class MessagesView: UIViewController {
     
     override func viewDidLoad() {
         //添加右滑菜单
+        
         cw_registerShowIntractive(withEdgeGesture: true) { (_ direction: CWDrawerTransitionDirection) in
             if direction == CWDrawerTransitionDirection.fromLeft {
                 let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "MenuViewController")
