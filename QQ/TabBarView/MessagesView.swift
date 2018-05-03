@@ -11,7 +11,10 @@ import CWLateralSlide
 
 class MessagesView: UIViewController {
     
+    @IBOutlet weak var messagesNavBar: UINavigationBar!
+    
     override func viewDidLoad() {
+        //添加右滑菜单
         cw_registerShowIntractive(withEdgeGesture: true) { (_ direction: CWDrawerTransitionDirection) in
             if direction == CWDrawerTransitionDirection.fromLeft {
                 let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "MenuViewController")
@@ -22,14 +25,12 @@ class MessagesView: UIViewController {
                 print("youhua")
             }
         }
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
+        //设置状态栏透明
+        messagesNavBar.setBackgroundImage(UIImage(), for: .default)
+        messagesNavBar.shadowImage = UIImage()
+        messagesNavBar.isTranslucent = true
     }
-    override func viewDidAppear(_ animated: Bool) {
-        //导航栏透明处理
-        //navigationController?.navigationBar.subviews[0].alpha = 0
-    }
+
     @IBAction func menu(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "MenuViewController")
 

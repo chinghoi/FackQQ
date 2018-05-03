@@ -34,6 +34,4 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.textLabel?.text = "这是第\(indexPath.row)个cell"
         return cell
     }
-    
-
 }
