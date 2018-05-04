@@ -40,8 +40,8 @@ class MessagesView: UIViewController {
     }
 }
 //列表菜单
-struct Menu {
-    var ico: UIImage //图标
-    var title: String //功能名称
-}
+//struct Menu {
+//    var ico: UIImage //图标
+//    var title: String //功能名称
+//}
 
