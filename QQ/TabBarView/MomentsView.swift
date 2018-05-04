@@ -11,6 +11,9 @@ import CWLateralSlide
 
 class MomentsView: UIViewController {
     
+    //设置屏幕可偏移距离
+    let leftMenuWidth = CWLateralSlideConfiguration()
+    
     @IBOutlet weak var momentsNavBar: UINavigationBar!
     
     override func viewDidLoad() {
@@ -18,8 +21,9 @@ class MomentsView: UIViewController {
         cw_registerShowIntractive(withEdgeGesture: true) { (_ direction: CWDrawerTransitionDirection) in
             if direction == CWDrawerTransitionDirection.fromLeft {
                 let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "MenuViewController")
-                // 调用这个方法
-                self.cw_showDefaultDrawerViewController(vc)
+                //调用显示视图
+                self.leftMenuWidth.distance = 0.8 * Float(UIScreen.main.bounds.width)
+                self.cw_showDrawerViewController(vc, animationType: .default, configuration: self.leftMenuWidth)
             } else if direction == CWDrawerTransitionDirection.fromRight {
                 print("youhua")
             }
@@ -32,7 +36,8 @@ class MomentsView: UIViewController {
     @IBAction func menu(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "MenuViewController")
         
-        // 调用这个方法
-        cw_showDefaultDrawerViewController(vc)
+        //调用显示视图
+        self.leftMenuWidth.distance = 0.8 * Float(UIScreen.main.bounds.width)
+        self.cw_showDrawerViewController(vc, animationType: .default, configuration: self.leftMenuWidth)
     }
 }

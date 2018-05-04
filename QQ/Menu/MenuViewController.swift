@@ -51,7 +51,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.imageView?.image = imageDictionary[indexPath.row]
         return cell
     }
+    @IBAction func qrInfoBtn(_ sender: UIButton) {
+        performSegue(withIdentifier: "myQR", sender: nil)
+    }
 }
+
 //按钮扩展
 extension UIButton {
     

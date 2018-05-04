@@ -19,6 +19,7 @@
 		E923A046208A025300FE826C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923A045208A025300FE826C /* LoginViewController.swift */; };
 		E93E6E0C208D8C2200E58048 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E6E0B208D8C2200E58048 /* MenuViewController.swift */; };
 		E99794A1208DF504009881C2 /* MenuTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99794A0208DF504009881C2 /* MenuTabViewController.swift */; };
+		E9D5027E209CB54400700F5B /* QRInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5027D209CB54400700F5B /* QRInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		E939F364208CBD6200DC247A /* QQ-Birdging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QQ-Birdging-Header.h"; sourceTree = "<group>"; };
 		E93E6E0B208D8C2200E58048 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E99794A0208DF504009881C2 /* MenuTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabViewController.swift; sourceTree = "<group>"; };
+		E9D5027D209CB54400700F5B /* QRInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				E93E6E0B208D8C2200E58048 /* MenuViewController.swift */,
 				E99794A0208DF504009881C2 /* MenuTabViewController.swift */,
+				E9D5027D209CB54400700F5B /* QRInfoView.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				E93E6E0C208D8C2200E58048 /* MenuViewController.swift in Sources */,
 				E99794A1208DF504009881C2 /* MenuTabViewController.swift in Sources */,
 				E90EE680208340DD000FD3CE /* MomentsView.swift in Sources */,
+				E9D5027E209CB54400700F5B /* QRInfoView.swift in Sources */,
 				E91FFBFE2082FEEB007BA83B /* AppDelegate.swift in Sources */,
 				E90EE67C20833E77000FD3CE /* MessagesView.swift in Sources */,
 			);

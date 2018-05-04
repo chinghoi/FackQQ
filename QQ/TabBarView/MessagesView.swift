@@ -11,6 +11,9 @@ import CWLateralSlide
 
 class MessagesView: UIViewController {
     
+    //设置屏幕可偏移距离
+    let leftMenuWidth = CWLateralSlideConfiguration()
+    
     @IBOutlet weak var messagesNavBar: UINavigationBar!
     
     override func viewDidLoad() {
@@ -20,8 +23,9 @@ class MessagesView: UIViewController {
             if direction == CWDrawerTransitionDirection.fromLeft {
                 let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "MenuViewController")
                 
-                // 调用这个方法
-                self.cw_showDefaultDrawerViewController(vc)
+                //调用显示视图
+                self.leftMenuWidth.distance = 0.8 * Float(UIScreen.main.bounds.width)
+                self.cw_showDrawerViewController(vc, animationType: .default, configuration: self.leftMenuWidth)
             } else if direction == CWDrawerTransitionDirection.fromRight {
                 print("youhua")
             }
@@ -35,8 +39,9 @@ class MessagesView: UIViewController {
     @IBAction func menu(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "MenuViewController")
 
-        // 调用这个方法
-        cw_showDefaultDrawerViewController(vc)
+        //调用显示视图
+        self.leftMenuWidth.distance = 0.8 * Float(UIScreen.main.bounds.width)
+        self.cw_showDrawerViewController(vc, animationType: .default, configuration: self.leftMenuWidth)
     }
 }
 //列表菜单
