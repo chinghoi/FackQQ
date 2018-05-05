@@ -12,16 +12,21 @@ class QRInfoView: UIViewController {
     
     @IBOutlet weak var myQRInfoNavBar: UINavigationBar!
     
-    func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
-    }
-    
-    override func viewDidLoad() {
-        //设置顶栏字体颜色
-        setNeedsStatusBarAppearanceUpdate()
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        
+        //设置顶栏字体颜色为黑色
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+        
         //设置状态栏透明
         myQRInfoNavBar.setBackgroundImage(UIImage(), for: .default)
         myQRInfoNavBar.shadowImage = UIImage()
         myQRInfoNavBar.isTranslucent = true
+    }
+    @IBAction func backBtn(_ sender: UIButton) {
+        //跳转到主页面
+        //dismiss(animated: true, completion: nil)
+        view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }

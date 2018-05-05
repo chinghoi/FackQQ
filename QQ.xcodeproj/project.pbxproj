@@ -147,7 +147,6 @@
 				E91FFBF72082FEEB007BA83B /* Frameworks */,
 				E91FFBF82082FEEB007BA83B /* Resources */,
 				05CF498A46441ADDF5FE155F /* [CP] Embed Pods Frameworks */,
-				63745A6B4323EA697B291E03 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,21 +224,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQ/Pods-QQ-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63745A6B4323EA697B291E03 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQ/Pods-QQ-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FAF4A32EC51DA111AE4C40DE /* [CP] Check Pods Manifest.lock */ = {
@@ -424,10 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BX3Y9SNP5;
 				INFOPLIST_FILE = QQ/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chinghoi888.QQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -444,10 +425,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BX3Y9SNP5;
 				INFOPLIST_FILE = QQ/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chinghoi888.QQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

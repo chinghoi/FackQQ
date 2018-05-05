@@ -23,6 +23,7 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
 
         //设置title字体颜色
         tabBar.tintColor = #colorLiteral(red: 0.2784313725, green: 0.7294117647, blue: 0.9960784314, alpha: 1)
@@ -44,6 +45,10 @@ class MainViewController: UITabBarController {
     
     //判断是否登录
     override func viewDidAppear(_ animated: Bool) {
+        
+        //设置顶栏字体颜色为白色
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+        
         if LCUser.current == nil {
             //登录
             performSegue(withIdentifier: "loginView", sender: self)

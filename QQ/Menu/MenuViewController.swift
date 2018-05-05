@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CWLateralSlide
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,6 +21,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var weatherBtn: UIButton!
     
     override func viewDidLoad() {
+        
+        //隐藏tableViewcell之间的横线
+        leftTableView.separatorStyle = .none
         
         //声明tableView的代理和数据源
         leftTableView.delegate = self
@@ -52,7 +56,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     @IBAction func qrInfoBtn(_ sender: UIButton) {
-        performSegue(withIdentifier: "myQR", sender: nil)
+
+        //先关闭当前侧滑界面
+        //dismiss(animated: true, completion: nil)
+        
+        let vc = QRInfoView()
+        
+        cw_present(vc)
+        
     }
 }
 

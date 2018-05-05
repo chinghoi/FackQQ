@@ -451,17 +451,16 @@
                         <outlet property="neightBtn" destination="0fw-aO-Gx3" id="33d-AQ-i1P"/>
                         <outlet property="settingsBtn" destination="dmN-h6-daw" id="TxQ-nQ-uyk"/>
                         <outlet property="weatherBtn" destination="a7f-op-qfS" id="6tl-wQ-lJf"/>
-                        <segue destination="DPY-N9-Mk9" kind="show" identifier="myQR" id="aCB-ZO-1j0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eo-6F-riu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1207.2" y="-545.57721139430294"/>
+            <point key="canvasLocation" x="-1205" y="-547"/>
         </scene>
         <!--Info View-->
         <scene sceneID="wv1-MX-OnS">
             <objects>
-                <viewController id="DPY-N9-Mk9" customClass="QRInfoView" customModule="QQ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRInfoView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DPY-N9-Mk9" customClass="QRInfoView" customModule="QQ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bhM-rc-MC1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -481,6 +480,9 @@
                                                 <state key="normal" title=" 返回" image="aio_back_arrow">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="backBtn:" destination="DPY-N9-Mk9" eventType="touchUpInside" id="y33-G2-FPQ"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -490,6 +492,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="j1V-vh-LyY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RzR-Oi-561"/>
                     <connections>
                         <outlet property="myQRInfoNavBar" destination="ZPB-g6-mMR" id="bjj-yc-5WM"/>
                     </connections>
