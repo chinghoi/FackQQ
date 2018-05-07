@@ -27,6 +27,6 @@ class QRInfoView: UIViewController {
     @IBAction func backBtn(_ sender: UIButton) {
         //跳转到主页面
         //dismiss(animated: true, completion: nil)
-        view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        //view.window?.rootViewController?.dismiss(animated: false, completion: nil)
     }
 }

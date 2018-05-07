@@ -33,6 +33,22 @@ class MomentsView: UIViewController {
         momentsNavBar.shadowImage = UIImage()
         momentsNavBar.isTranslucent = true
     }
+    //设置 grouped 风格的 header 高度
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return CGFloat(45)
+        }
+        return tableView.sectionHeaderHeight
+    }
+    //设置 header 图片
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var vw = UIView()
+        
+        vw = UIImageView(image: #imageLiteral(resourceName: "headerImage"))
+        //添加点击事件
+        
+        return vw
+    }
     @IBAction func menu(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "MenuViewController")
         

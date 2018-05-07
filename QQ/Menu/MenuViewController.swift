@@ -55,17 +55,16 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.imageView?.image = imageDictionary[indexPath.row]
         return cell
     }
-    @IBAction func qrInfoBtn(_ sender: UIButton) {
-
-        //先关闭当前侧滑界面
-        //dismiss(animated: true, completion: nil)
-        
-        let vc = QRInfoView()
-        
-        cw_present(vc)
-        
-    }
+    //用StoryBoard跳转更方便
+//    @IBAction func qrInfoBtn(_ sender: UIButton) {
+//
+////        //先关闭当前侧滑界面
+//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRInfoView")
+////        show(vc, sender: nil)
+//        present(vc, animated: true)
+//    }
 }
+
 
 //按钮扩展
 extension UIButton {
