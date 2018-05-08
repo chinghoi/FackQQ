@@ -9,16 +9,17 @@
 import UIKit
 import CWLateralSlide
 
-class MessagesView: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MessagesView: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     
-    let titlesDictionary = ["激活会员", "QQ钱包", "个性装扮", "我的收藏", "我的相册", "我的文件", "免流量特权"]
-    let imageDictionary = [#imageLiteral(resourceName: "sidebar_vip_shadow"), #imageLiteral(resourceName: "sidebar_purse"), #imageLiteral(resourceName: "sidebar_decoration"), #imageLiteral(resourceName: "sidebar_favorit"), #imageLiteral(resourceName: "sidebar_album"), #imageLiteral(resourceName: "sidebar_file"), #imageLiteral(resourceName: "sidebar_freetraffic")]
+    let titlesDictionary = ["激活会员", "QQ钱包", "个性装扮", "我的收藏", "我的相册", "我的文件", "免流量特权", "激活会员", "QQ钱包", "个性装扮", "我的收藏", "我的相册", "我的文件", "免流量特权"]
+    let imageDictionary = [#imageLiteral(resourceName: "sidebar_vip_shadow"), #imageLiteral(resourceName: "sidebar_purse"), #imageLiteral(resourceName: "sidebar_decoration"), #imageLiteral(resourceName: "sidebar_favorit"), #imageLiteral(resourceName: "sidebar_album"), #imageLiteral(resourceName: "sidebar_file"), #imageLiteral(resourceName: "sidebar_freetraffic"), #imageLiteral(resourceName: "sidebar_vip_shadow"), #imageLiteral(resourceName: "sidebar_purse"), #imageLiteral(resourceName: "sidebar_decoration"), #imageLiteral(resourceName: "sidebar_favorit"), #imageLiteral(resourceName: "sidebar_album"), #imageLiteral(resourceName: "sidebar_file"), #imageLiteral(resourceName: "sidebar_freetraffic")]
     
     //设置屏幕可偏移距离
     let leftMenuWidth = CWLateralSlideConfiguration()
     
     @IBOutlet weak var messagesNavBar: UINavigationBar!
     @IBOutlet weak var messagesTableView: UITableView!
+    @IBOutlet weak var searchBtn: UIButton!
     
     override func viewDidLoad() {
         //添加右滑菜单
@@ -42,6 +43,7 @@ class MessagesView: UIViewController, UITableViewDelegate, UITableViewDataSource
         //声明tableView的代理和数据源
         messagesTableView.delegate = self
         messagesTableView.dataSource = self
+        
     }
     @IBAction func searchBtn(_ sender: UIButton) {
         print("点击成功")
@@ -62,8 +64,20 @@ class MessagesView: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         return vw
     }
-    func headerIsTapEvent() {
-        print("点击成功")
+    //判断用户拖动完成后搜索框是否显示
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        //判断是否显示搜索header,并设置searchbar触控响应
+        if scrollView.contentOffset.y < CGFloat(25) {
+            
+            searchBtn.isEnabled = true
+            targetContentOffset.pointee.y = CGFloat(0)
+            
+        } else if scrollView.contentOffset.y >= CGFloat(25) && scrollView.contentOffset.y < CGFloat(45) {
+            
+            searchBtn.isEnabled = false
+            targetContentOffset.pointee.y = CGFloat(45)
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -243,6 +243,7 @@
                     <connections>
                         <outlet property="messagesNavBar" destination="Da5-6X-Nob" id="D87-Fc-dHi"/>
                         <outlet property="messagesTableView" destination="kUM-UE-dLv" id="kzS-JE-78x"/>
+                        <outlet property="searchBtn" destination="kh6-0l-dRE" id="SBW-iz-ijj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJL-mw-BsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
