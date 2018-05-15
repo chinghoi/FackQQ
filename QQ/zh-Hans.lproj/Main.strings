@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "0I4-Lg-RwW"; */
+"0I4-Lg-RwW.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0fw-aO-Gx3"; */
+"0fw-aO-Gx3.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "新用户注册"; ObjectID = "1Xr-BM-bEb"; */
+"1Xr-BM-bEb.normalTitle" = "新用户注册";
+
+/* Class = "UIButton"; normalTitle = "服务条款"; ObjectID = "56h-Ls-dKX"; */
+"56h-Ls-dKX.normalTitle" = "服务条款";
+
+/* Class = "UINavigationItem"; title = "联系人"; ObjectID = "Nf7-Hc-yzV"; */
+"Nf7-Hc-yzV.title" = "联系人";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "RHq-KL-zS7"; */
+"RHq-KL-zS7.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "我的二维码"; ObjectID = "S5M-D8-6WY"; */
+"S5M-D8-6WY.title" = "我的二维码";
+
+/* Class = "UINavigationItem"; title = "动态"; ObjectID = "T22-5Q-9Yr"; */
+"T22-5Q-9Yr.title" = "动态";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "WVX-NN-Ukm"; */
+"WVX-NN-Ukm.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "登录即代表阅读并同意"; ObjectID = "ZGE-jg-yza"; */
+"ZGE-jg-yza.text" = "登录即代表阅读并同意";
+
+/* Class = "UIButton"; normalTitle = "忘记密码?"; ObjectID = "ZOK-WM-PQu"; */
+"ZOK-WM-PQu.normalTitle" = "忘记密码?";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "a7f-op-qfS"; */
+"a7f-op-qfS.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dmN-h6-daw"; */
+"dmN-h6-daw.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "添加"; ObjectID = "nIH-tw-OSa"; */
+"nIH-tw-OSa.normalTitle" = "添加";
+
+/* Class = "UIButton"; normalTitle = "更多"; ObjectID = "nma-On-o3B"; */
+"nma-On-o3B.normalTitle" = "更多";
+
+/* Class = "UIButton"; normalTitle = " 返回"; ObjectID = "x8d-Gn-2nS"; */
+"x8d-Gn-2nS.normalTitle" = " 返回";
+
+/* Class = "UINavigationItem"; title = "消息"; ObjectID = "ylt-HA-G4k"; */
+"ylt-HA-G4k.title" = "消息";

@@ -9,17 +9,19 @@
 /* Begin PBXBuildFile section */
 		56971B77AE25EF8AFF104FB4 /* Pods_QQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA715A9516C6CC99BC454E4 /* Pods_QQ.framework */; };
 		E90EE67C20833E77000FD3CE /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EE67B20833E77000FD3CE /* MessagesView.swift */; };
-		E90EE67E20833F6B000FD3CE /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EE67D20833F6B000FD3CE /* ContactsView.swift */; };
-		E90EE680208340DD000FD3CE /* MomentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EE67F208340DD000FD3CE /* MomentsView.swift */; };
 		E91FFBFE2082FEEB007BA83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FFBFD2082FEEB007BA83B /* AppDelegate.swift */; };
-		E91FFC002082FEEB007BA83B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FFBFF2082FEEB007BA83B /* MainViewController.swift */; };
 		E91FFC032082FEEB007BA83B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91FFC012082FEEB007BA83B /* Main.storyboard */; };
 		E91FFC052082FEEC007BA83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91FFC042082FEEC007BA83B /* Assets.xcassets */; };
 		E91FFC082082FEEC007BA83B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91FFC062082FEEC007BA83B /* LaunchScreen.storyboard */; };
+		E921CBD720A5B71A00D6FA98 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E921CBD520A5B71A00D6FA98 /* ContactsViewController.swift */; };
+		E921CBD820A5B71A00D6FA98 /* MomentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E921CBD620A5B71A00D6FA98 /* MomentsViewController.swift */; };
 		E923A046208A025300FE826C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923A045208A025300FE826C /* LoginViewController.swift */; };
 		E93E6E0C208D8C2200E58048 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E6E0B208D8C2200E58048 /* MenuViewController.swift */; };
-		E99794A1208DF504009881C2 /* MenuTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99794A0208DF504009881C2 /* MenuTabViewController.swift */; };
+		E97870E020A3F1F70087BC84 /* SearchResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97870DF20A3F1F70087BC84 /* SearchResultVC.swift */; };
+		E99794A1208DF504009881C2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99794A0208DF504009881C2 /* MainTabBarController.swift */; };
+		E9A2B3E820A4318D001D94BC /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2B3E720A4318D001D94BC /* MessageViewController.swift */; };
 		E9D5027E209CB54400700F5B /* QRInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5027D209CB54400700F5B /* QRInfoView.swift */; };
+		E9E3389F20AAC5EB00DAB62B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E3389E20AAC5EB00DAB62B /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,20 +29,24 @@
 		5AC1908A66D590FC9D3C6978 /* Pods-QQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QQ/Pods-QQ.debug.xcconfig"; sourceTree = "<group>"; };
 		6BA715A9516C6CC99BC454E4 /* Pods_QQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90EE67B20833E77000FD3CE /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
-		E90EE67D20833F6B000FD3CE /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
-		E90EE67F208340DD000FD3CE /* MomentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsView.swift; sourceTree = "<group>"; };
 		E91FFBFA2082FEEB007BA83B /* QQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91FFBFD2082FEEB007BA83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E91FFBFF2082FEEB007BA83B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E91FFC022082FEEB007BA83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E91FFC042082FEEC007BA83B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E91FFC072082FEEC007BA83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E91FFC092082FEEC007BA83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E921CBD520A5B71A00D6FA98 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		E921CBD620A5B71A00D6FA98 /* MomentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentsViewController.swift; sourceTree = "<group>"; };
 		E923A045208A025300FE826C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E939F364208CBD6200DC247A /* QQ-Birdging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QQ-Birdging-Header.h"; sourceTree = "<group>"; };
 		E93E6E0B208D8C2200E58048 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		E99794A0208DF504009881C2 /* MenuTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabViewController.swift; sourceTree = "<group>"; };
+		E97870DF20A3F1F70087BC84 /* SearchResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultVC.swift; sourceTree = "<group>"; };
+		E97870E120A3F46F0087BC84 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		E97870E220A3F46F0087BC84 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		E99794A0208DF504009881C2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		E9A2B3E720A4318D001D94BC /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		E9D5027D209CB54400700F5B /* QRInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRInfoView.swift; sourceTree = "<group>"; };
+		E9E3389E20AAC5EB00DAB62B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +94,11 @@
 			children = (
 				E91FFBFD2082FEEB007BA83B /* AppDelegate.swift */,
 				E923A045208A025300FE826C /* LoginViewController.swift */,
-				E91FFBFF2082FEEB007BA83B /* MainViewController.swift */,
-				E997949F208DF4D5009881C2 /* Menu */,
+				E9E3389E20AAC5EB00DAB62B /* MainViewController.swift */,
+				E99794A0208DF504009881C2 /* MainTabBarController.swift */,
+				E93E6E0B208D8C2200E58048 /* MenuViewController.swift */,
+				E9D5027D209CB54400700F5B /* QRInfoView.swift */,
+				E97870DF20A3F1F70087BC84 /* SearchResultVC.swift */,
 				E93E6E0A208D8A4800E58048 /* TabBarView */,
 				E91FFC012082FEEB007BA83B /* Main.storyboard */,
 				E91FFC062082FEEC007BA83B /* LaunchScreen.storyboard */,
@@ -111,20 +120,11 @@
 			isa = PBXGroup;
 			children = (
 				E90EE67B20833E77000FD3CE /* MessagesView.swift */,
-				E90EE67D20833F6B000FD3CE /* ContactsView.swift */,
-				E90EE67F208340DD000FD3CE /* MomentsView.swift */,
+				E9A2B3E720A4318D001D94BC /* MessageViewController.swift */,
+				E921CBD520A5B71A00D6FA98 /* ContactsViewController.swift */,
+				E921CBD620A5B71A00D6FA98 /* MomentsViewController.swift */,
 			);
 			path = TabBarView;
-			sourceTree = "<group>";
-		};
-		E997949F208DF4D5009881C2 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				E93E6E0B208D8C2200E58048 /* MenuViewController.swift */,
-				E99794A0208DF504009881C2 /* MenuTabViewController.swift */,
-				E9D5027D209CB54400700F5B /* QRInfoView.swift */,
-			);
-			path = Menu;
 			sourceTree = "<group>";
 		};
 		FA086A1F47145404DFD41579 /* Frameworks */ = {
@@ -177,7 +177,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = E91FFBF12082FEEB007BA83B;
@@ -212,13 +211,11 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-QQ/Pods-QQ-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/CWLateralSlide/CWLateralSlide.framework",
 				"${BUILT_PRODUCTS_DIR}/LeanCloud/LeanCloud.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CWLateralSlide.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanCloud.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,14 +249,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E923A046208A025300FE826C /* LoginViewController.swift in Sources */,
-				E90EE67E20833F6B000FD3CE /* ContactsView.swift in Sources */,
-				E91FFC002082FEEB007BA83B /* MainViewController.swift in Sources */,
+				E9E3389F20AAC5EB00DAB62B /* MainViewController.swift in Sources */,
 				E93E6E0C208D8C2200E58048 /* MenuViewController.swift in Sources */,
-				E99794A1208DF504009881C2 /* MenuTabViewController.swift in Sources */,
-				E90EE680208340DD000FD3CE /* MomentsView.swift in Sources */,
+				E99794A1208DF504009881C2 /* MainTabBarController.swift in Sources */,
+				E921CBD720A5B71A00D6FA98 /* ContactsViewController.swift in Sources */,
+				E921CBD820A5B71A00D6FA98 /* MomentsViewController.swift in Sources */,
 				E9D5027E209CB54400700F5B /* QRInfoView.swift in Sources */,
+				E9A2B3E820A4318D001D94BC /* MessageViewController.swift in Sources */,
 				E91FFBFE2082FEEB007BA83B /* AppDelegate.swift in Sources */,
 				E90EE67C20833E77000FD3CE /* MessagesView.swift in Sources */,
+				E97870E020A3F1F70087BC84 /* SearchResultVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +269,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E91FFC022082FEEB007BA83B /* Base */,
+				E97870E120A3F46F0087BC84 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -278,6 +278,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E91FFC072082FEEC007BA83B /* Base */,
+				E97870E220A3F46F0087BC84 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -289,6 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -349,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -408,7 +411,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BX3Y9SNP5;
 				INFOPLIST_FILE = QQ/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chinghoi888.QQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -425,7 +431,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BX3Y9SNP5;
 				INFOPLIST_FILE = QQ/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chinghoi888.QQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

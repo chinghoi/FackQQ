@@ -1,26 +1,22 @@
 PODS:
   - Alamofire (4.7.2)
-  - CWLateralSlide (1.6.1)
   - LeanCloud (11.0.0):
     - LeanCloud/Storage (= 11.0.0)
   - LeanCloud/Storage (11.0.0):
     - Alamofire (~> 4.5)
 
 DEPENDENCIES:
-  - CWLateralSlide (~> 1.6.1)
   - LeanCloud (~> 11.0.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
-    - CWLateralSlide
     - LeanCloud
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  CWLateralSlide: a3657f94cb1a9fa225c828fe96d2fdaddb82006a
   LeanCloud: cb29157ba8f4e948f3476b4503903b7e6da9c260
 
-PODFILE CHECKSUM: 25d3905a8120d644b9f91a791ecb40c96ac48233
+PODFILE CHECKSUM: 88b049727f063fa2c281b17bdf3ac1c5da261616
 
 COCOAPODS: 1.5.0

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CWLateralSlide
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -55,18 +54,15 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.imageView?.image = imageDictionary[indexPath.row]
         return cell
     }
-    //用StoryBoard跳转更方便
-//    @IBAction func qrInfoBtn(_ sender: UIButton) {
-//
-////        //先关闭当前侧滑界面
-//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRInfoView")
-////        show(vc, sender: nil)
-//        present(vc, animated: true)
-//    }
+    @IBAction func qrInfo(_ sender: UIButton) {
+        NotificationCenter.default.post(name: NSNotification.Name("IsSideMenuOpen"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name("QRInfoView"), object: nil)
+    }
+    
 }
 
 
-//按钮扩展
+//图标在上文字在下按钮扩展
 extension UIButton {
     
     @objc func set(image anImage: UIImage?, title: String,

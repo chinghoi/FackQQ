@@ -90,7 +90,7 @@ class LoginViewController: UIViewController {
         password.resignFirstResponder()
 
         if (userName.text != nil) && (password.text != nil) {
-            LCUser.logIn(username: "123", password: "123") { result in
+            LCUser.logIn(username: "1234", password: "1234") { result in
                 switch result {
                 case .success(let user):
                     self.performSegue(withIdentifier: "mainView", sender: nil)
