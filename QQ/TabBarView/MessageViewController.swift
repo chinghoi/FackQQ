@@ -12,8 +12,7 @@ class MessagesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    //搜索控制器
-    var searchController: UISearchController!
+    var searchBtn = UIButton(type: UIButtonType.custom)
     
     let titlesDictionary = ["激活会员", "QQ钱包", "个性装扮", "我的收藏", "我的相册", "我的文件", "免流量特权", "激活会员", "QQ钱包", "个性装扮", "我的收藏", "我的相册", "我的文件", "免流量特权"]
     let imageDictionary = [#imageLiteral(resourceName: "sidebar_vip_shadow"), #imageLiteral(resourceName: "sidebar_purse"), #imageLiteral(resourceName: "sidebar_decoration"), #imageLiteral(resourceName: "sidebar_favorit"), #imageLiteral(resourceName: "sidebar_album"), #imageLiteral(resourceName: "sidebar_file"), #imageLiteral(resourceName: "sidebar_freetraffic"), #imageLiteral(resourceName: "sidebar_vip_shadow"), #imageLiteral(resourceName: "sidebar_purse"), #imageLiteral(resourceName: "sidebar_decoration"), #imageLiteral(resourceName: "sidebar_favorit"), #imageLiteral(resourceName: "sidebar_album"), #imageLiteral(resourceName: "sidebar_file"), #imageLiteral(resourceName: "sidebar_freetraffic")]
@@ -30,33 +29,17 @@ class MessagesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        initializeSearchController()
-        
-        //添加一个观察者
-        NotificationCenter.default.addObserver(self, selector: #selector(qRInfoView), name: NSNotification.Name(rawValue: "QRInfoView"), object: nil)
+        searchBtn.setBackgroundImage(#imageLiteral(resourceName: "headerImage"), for: .normal)
+        searchBtn.frame.size = CGSize(width: tableView.bounds.width, height: 44)
+        searchBtn.addTarget(self, action: #selector(searchBtn(_:)), for: .touchUpInside)
+        tableView.tableHeaderView = searchBtn
         
     }
-    
-    func initializeSearchController() {
-        
-        let searchResultVC = SearchResultVC()
-        
-        searchController = UISearchController(searchResultsController: searchResultVC)
-        
-        searchController.searchBar.placeholder = "搜索"
-        
-        searchController.hidesNavigationBarDuringPresentation = true
-        //调整高度
-        searchController.searchBar.frame.size = CGSize(width: UIScreen.main.bounds.size.width, height: 44)
-        searchController.loadViewIfNeeded()
-        definesPresentationContext = true
-        
-        tableView.tableHeaderView = searchController.searchBar
-        //searchBar代理
-        searchController.searchBar.delegate = self
+    @objc func searchBtn(_ sender: UIButton) {
+        let searchResultVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchResultVC")
+        present(searchResultVC, animated: false, completion: nil)
     }
     
-
     @IBAction func sideMenuBtn(_ sender: UIButton) {
         print("侧滑菜单点击成功")
         NotificationCenter.default.post(name: NSNotification.Name("IsSideMenuOpen"), object: nil)
@@ -71,11 +54,6 @@ class MessagesViewController: UIViewController {
             
         }
     }
-    //通知处理方法
-    @objc func qRInfoView() {
-        performSegue(withIdentifier: "QRInfoView", sender: nil)
-    }
-    
 }
 // MARK:----表视图代理
 extension MessagesViewController: UITableViewDelegate {
@@ -94,19 +72,43 @@ extension MessagesViewController: UITableViewDataSource {
         return cell
     }
 }
-// MARK:---- searchBar
-extension MessagesViewController: UISearchBarDelegate {
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        print("-beain editing-")
-        //调整高度
-        searchController.searchBar.frame.size = CGSize(width: UIScreen.main.bounds.size.width, height: 44)
-    }
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        print("-end editing-")
-        //调整高度
-        searchController.searchBar.frame.size = CGSize(width: UIScreen.main.bounds.size.width, height: 44)
-    }
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        print("-cancel-")
-    }
-}
+//// MARK:---- searchBar
+//extension MessagesViewController: UISearchBarDelegate {
+//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+//        print("-beain editing-")
+//        //调整高度
+//    }
+//    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+//        print("-end editing-")
+//        //调整高度
+//    }
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//        searchBar.resignFirstResponder()
+//        resignFirstResponder()
+//        print("-cancel-")
+//
+//    }
+//}
+//extension MessagesViewController: UINavigationControllerDelegate {
+//   func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//    let transition = PushAnimator()
+//    return transition
+//    }
+//}
+//extension MessagesViewController: CustomSearchControllerDelegate {
+//    func didStartSearching() {
+//        print("000")
+//    }
+//
+//    func didTapOnSearchButton() {
+//        print("111")
+//    }
+//
+//    func didTapOnCancelButton() {
+//        print("222")
+//    }
+//
+//    func didChangeSearchText(searchText: String) {
+//        print("333")
+//    }
+//}

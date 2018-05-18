@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		56971B77AE25EF8AFF104FB4 /* Pods_QQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA715A9516C6CC99BC454E4 /* Pods_QQ.framework */; };
-		E90EE67C20833E77000FD3CE /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EE67B20833E77000FD3CE /* MessagesView.swift */; };
+		E91C56C220ABF0100058008D /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C56C120ABF0100058008D /* PushAnimator.swift */; };
 		E91FFBFE2082FEEB007BA83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FFBFD2082FEEB007BA83B /* AppDelegate.swift */; };
 		E91FFC032082FEEB007BA83B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91FFC012082FEEB007BA83B /* Main.storyboard */; };
 		E91FFC052082FEEC007BA83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91FFC042082FEEC007BA83B /* Assets.xcassets */; };
@@ -17,10 +17,20 @@
 		E921CBD820A5B71A00D6FA98 /* MomentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E921CBD620A5B71A00D6FA98 /* MomentsViewController.swift */; };
 		E923A046208A025300FE826C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923A045208A025300FE826C /* LoginViewController.swift */; };
 		E93E6E0C208D8C2200E58048 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E6E0B208D8C2200E58048 /* MenuViewController.swift */; };
+		E974643320AD5F89005D2166 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974643220AD5F89005D2166 /* CustomSearchBar.swift */; };
+		E974643520ADB98F005D2166 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974643420ADB98F005D2166 /* CustomSearchController.swift */; };
 		E97870E020A3F1F70087BC84 /* SearchResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97870DF20A3F1F70087BC84 /* SearchResultVC.swift */; };
 		E99794A1208DF504009881C2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99794A0208DF504009881C2 /* MainTabBarController.swift */; };
 		E9A2B3E820A4318D001D94BC /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2B3E720A4318D001D94BC /* MessageViewController.swift */; };
-		E9D5027E209CB54400700F5B /* QRInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5027D209CB54400700F5B /* QRInfoView.swift */; };
+		E9A8BE3320AEB84900DEBC46 /* VIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8BE3220AEB84900DEBC46 /* VIPViewController.swift */; };
+		E9A8BE3520AEB8C600DEBC46 /* QQWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8BE3420AEB8C600DEBC46 /* QQWalletViewController.swift */; };
+		E9A8BE3B20AEBB7B00DEBC46 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8BE3620AEBB7B00DEBC46 /* FileViewController.swift */; };
+		E9A8BE3C20AEBB7B00DEBC46 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8BE3720AEBB7B00DEBC46 /* ThemeViewController.swift */; };
+		E9A8BE3D20AEBB7B00DEBC46 /* SpecialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8BE3820AEBB7B00DEBC46 /* SpecialViewController.swift */; };
+		E9A8BE3E20AEBB7B00DEBC46 /* CollectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8BE3920AEBB7B00DEBC46 /* CollectViewController.swift */; };
+		E9A8BE3F20AEBB7B00DEBC46 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8BE3A20AEBB7B00DEBC46 /* PhotoViewController.swift */; };
+		E9A8BE4120AED63600DEBC46 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8BE4020AED63600DEBC46 /* SettingViewController.swift */; };
+		E9D5027E209CB54400700F5B /* QRInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5027D209CB54400700F5B /* QRInfoViewController.swift */; };
 		E9E3389F20AAC5EB00DAB62B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E3389E20AAC5EB00DAB62B /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +38,7 @@
 		40DAFCBF7FE3A9E3759E91C6 /* Pods-QQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQ.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQ/Pods-QQ.release.xcconfig"; sourceTree = "<group>"; };
 		5AC1908A66D590FC9D3C6978 /* Pods-QQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QQ/Pods-QQ.debug.xcconfig"; sourceTree = "<group>"; };
 		6BA715A9516C6CC99BC454E4 /* Pods_QQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E90EE67B20833E77000FD3CE /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		E91C56C120ABF0100058008D /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
 		E91FFBFA2082FEEB007BA83B /* QQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91FFBFD2082FEEB007BA83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E91FFC022082FEEB007BA83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,12 +50,22 @@
 		E923A045208A025300FE826C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E939F364208CBD6200DC247A /* QQ-Birdging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QQ-Birdging-Header.h"; sourceTree = "<group>"; };
 		E93E6E0B208D8C2200E58048 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E974643220AD5F89005D2166 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		E974643420ADB98F005D2166 /* CustomSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
 		E97870DF20A3F1F70087BC84 /* SearchResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultVC.swift; sourceTree = "<group>"; };
 		E97870E120A3F46F0087BC84 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		E97870E220A3F46F0087BC84 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		E99794A0208DF504009881C2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E9A2B3E720A4318D001D94BC /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
-		E9D5027D209CB54400700F5B /* QRInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRInfoView.swift; sourceTree = "<group>"; };
+		E9A8BE3220AEB84900DEBC46 /* VIPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPViewController.swift; sourceTree = "<group>"; };
+		E9A8BE3420AEB8C600DEBC46 /* QQWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQWalletViewController.swift; sourceTree = "<group>"; };
+		E9A8BE3620AEBB7B00DEBC46 /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		E9A8BE3720AEBB7B00DEBC46 /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
+		E9A8BE3820AEBB7B00DEBC46 /* SpecialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialViewController.swift; sourceTree = "<group>"; };
+		E9A8BE3920AEBB7B00DEBC46 /* CollectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectViewController.swift; sourceTree = "<group>"; };
+		E9A8BE3A20AEBB7B00DEBC46 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		E9A8BE4020AED63600DEBC46 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		E9D5027D209CB54400700F5B /* QRInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRInfoViewController.swift; sourceTree = "<group>"; };
 		E9E3389E20AAC5EB00DAB62B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,9 +116,10 @@
 				E923A045208A025300FE826C /* LoginViewController.swift */,
 				E9E3389E20AAC5EB00DAB62B /* MainViewController.swift */,
 				E99794A0208DF504009881C2 /* MainTabBarController.swift */,
+				E91C56C120ABF0100058008D /* PushAnimator.swift */,
 				E93E6E0B208D8C2200E58048 /* MenuViewController.swift */,
-				E9D5027D209CB54400700F5B /* QRInfoView.swift */,
-				E97870DF20A3F1F70087BC84 /* SearchResultVC.swift */,
+				E974643120AD5F3A005D2166 /* SearchBar */,
+				E974643020AD50FA005D2166 /* SideCellView */,
 				E93E6E0A208D8A4800E58048 /* TabBarView */,
 				E91FFC012082FEEB007BA83B /* Main.storyboard */,
 				E91FFC062082FEEC007BA83B /* LaunchScreen.storyboard */,
@@ -119,12 +140,37 @@
 		E93E6E0A208D8A4800E58048 /* TabBarView */ = {
 			isa = PBXGroup;
 			children = (
-				E90EE67B20833E77000FD3CE /* MessagesView.swift */,
 				E9A2B3E720A4318D001D94BC /* MessageViewController.swift */,
 				E921CBD520A5B71A00D6FA98 /* ContactsViewController.swift */,
 				E921CBD620A5B71A00D6FA98 /* MomentsViewController.swift */,
 			);
 			path = TabBarView;
+			sourceTree = "<group>";
+		};
+		E974643020AD50FA005D2166 /* SideCellView */ = {
+			isa = PBXGroup;
+			children = (
+				E9D5027D209CB54400700F5B /* QRInfoViewController.swift */,
+				E9A8BE3220AEB84900DEBC46 /* VIPViewController.swift */,
+				E9A8BE3420AEB8C600DEBC46 /* QQWalletViewController.swift */,
+				E9A8BE3720AEBB7B00DEBC46 /* ThemeViewController.swift */,
+				E9A8BE3920AEBB7B00DEBC46 /* CollectViewController.swift */,
+				E9A8BE3A20AEBB7B00DEBC46 /* PhotoViewController.swift */,
+				E9A8BE3620AEBB7B00DEBC46 /* FileViewController.swift */,
+				E9A8BE3820AEBB7B00DEBC46 /* SpecialViewController.swift */,
+				E9A8BE4020AED63600DEBC46 /* SettingViewController.swift */,
+			);
+			path = SideCellView;
+			sourceTree = "<group>";
+		};
+		E974643120AD5F3A005D2166 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				E97870DF20A3F1F70087BC84 /* SearchResultVC.swift */,
+				E974643220AD5F89005D2166 /* CustomSearchBar.swift */,
+				E974643420ADB98F005D2166 /* CustomSearchController.swift */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 		FA086A1F47145404DFD41579 /* Frameworks */ = {
@@ -249,15 +295,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E923A046208A025300FE826C /* LoginViewController.swift in Sources */,
+				E974643320AD5F89005D2166 /* CustomSearchBar.swift in Sources */,
+				E9A8BE3B20AEBB7B00DEBC46 /* FileViewController.swift in Sources */,
+				E9A8BE3E20AEBB7B00DEBC46 /* CollectViewController.swift in Sources */,
+				E9A8BE3320AEB84900DEBC46 /* VIPViewController.swift in Sources */,
+				E9A8BE4120AED63600DEBC46 /* SettingViewController.swift in Sources */,
+				E974643520ADB98F005D2166 /* CustomSearchController.swift in Sources */,
 				E9E3389F20AAC5EB00DAB62B /* MainViewController.swift in Sources */,
 				E93E6E0C208D8C2200E58048 /* MenuViewController.swift in Sources */,
 				E99794A1208DF504009881C2 /* MainTabBarController.swift in Sources */,
+				E9A8BE3F20AEBB7B00DEBC46 /* PhotoViewController.swift in Sources */,
+				E9A8BE3D20AEBB7B00DEBC46 /* SpecialViewController.swift in Sources */,
+				E91C56C220ABF0100058008D /* PushAnimator.swift in Sources */,
 				E921CBD720A5B71A00D6FA98 /* ContactsViewController.swift in Sources */,
 				E921CBD820A5B71A00D6FA98 /* MomentsViewController.swift in Sources */,
-				E9D5027E209CB54400700F5B /* QRInfoView.swift in Sources */,
+				E9A8BE3C20AEBB7B00DEBC46 /* ThemeViewController.swift in Sources */,
+				E9D5027E209CB54400700F5B /* QRInfoViewController.swift in Sources */,
+				E9A8BE3520AEB8C600DEBC46 /* QQWalletViewController.swift in Sources */,
 				E9A2B3E820A4318D001D94BC /* MessageViewController.swift in Sources */,
 				E91FFBFE2082FEEB007BA83B /* AppDelegate.swift in Sources */,
-				E90EE67C20833E77000FD3CE /* MessagesView.swift in Sources */,
 				E97870E020A3F1F70087BC84 /* SearchResultVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

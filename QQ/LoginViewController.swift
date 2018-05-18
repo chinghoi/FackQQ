@@ -88,28 +88,61 @@ class LoginViewController: UIViewController {
     @IBAction func loginBtn(_ sender: UIButton) {
         userName.resignFirstResponder()
         password.resignFirstResponder()
+        
+//        if userName.text == nil {
+//            let alertController = UIAlertController(title: "请输入账号!",
+//                                                    message: nil, preferredStyle: .alert)
+//            //显示提示框
+//            self.present(alertController, animated: true, completion: nil)
+//            //两秒钟后自动消失
+//            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+//                self.presentedViewController?.dismiss(animated: false, completion: nil)
+//            }
+//        } else if password.text == nil {
+//            
+//        }
 
-        if (userName.text != nil) && (password.text != nil) {
-            LCUser.logIn(username: "1234", password: "1234") { result in
-                switch result {
-                case .success(let user):
-                    self.performSegue(withIdentifier: "mainView", sender: nil)
-                    break
-                case .failure(let error):
-                    print(error)
-                }
+        guard userName.text != "" else {
+            let alertController = UIAlertController(title: "请输入账号!",
+                                                    message: nil, preferredStyle: .alert)
+            //显示提示框
+            self.present(alertController, animated: true, completion: nil)
+            //两秒钟后自动消失
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                self.presentedViewController?.dismiss(animated: false, completion: nil)
+            }
+            return
+        }
+        guard password.text != "" else {
+            let alertController = UIAlertController(title: "请输入密码!",
+                                                    message: nil, preferredStyle: .alert)
+            //显示提示框
+            self.present(alertController, animated: true, completion: nil)
+            //两秒钟后自动消失
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                self.presentedViewController?.dismiss(animated: false, completion: nil)
+            }
+            return
+        }
+        
+        LCUser.logIn(username: userName.text!, password: password.text!) { result in
+            switch result {
+            case .success(let user):
+                self.performSegue(withIdentifier: "mainView", sender: nil)
+                break
+            case .failure(let error):
+                print(error)
             }
         }
     }
-    /**
-     UIView 扩展画线
-     
-     - parameter X:      X 线的X
-     - parameter Y:      Y 线的X
-     - parameter width:  width 线的width
-     - parameter height: height 线的height
-     - parameter coloer: coloer 线的颜色
-     */
+    /// UIView 扩展画线
+    ///
+    /// - Parameters:
+    ///   - X: X 线的X
+    ///   - Y: Y 线的X
+    ///   - width: width 线的width
+    ///   - height: height 线的height
+    ///   - coloer: coloer 线的颜色
     func addBorderLine(X: CGFloat, Y: CGFloat, width: CGFloat, height: CGFloat, coloer: UIColor, layer: CALayer)  {
         let border = CALayer()
         border.backgroundColor = coloer.cgColor

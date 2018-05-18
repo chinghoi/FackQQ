@@ -44,26 +44,24 @@ class MainTabBarController: UITabBarController {
         item2.image = #imageLiteral(resourceName: "DidSelectMoments")
         item2.selectedImage = #imageLiteral(resourceName: "SelectMoments")
         item2.title = "动态"
-        
-        
+
     }
     //判断是否登录
     override func viewDidAppear(_ animated: Bool) {
         
         //设置顶栏字体颜色为白色
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
-
-//        if LCUser.current == nil {
-//            //登录
-//            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
-//            present(vc, animated: true, completion: nil)
-//            print("denglu")
-//        } else {
-//            //刷新
-//            print("刷新")
-//        }
+        
+        if LCUser.current == nil {
+            //登录
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
+            present(vc, animated: true, completion: nil)
+            print("登录")
+        } else {
+            //刷新
+            print("刷新")
+        }
     }
-    
 
     
     // 当点击tabBar的时候,自动执行该代理方法(不需要手动设置代理)
@@ -88,7 +86,11 @@ class MainTabBarController: UITabBarController {
             }
         }
     }
-    // 动画方法
+    /// tabbar上的图片动画处理
+    ///
+    /// - Parameters:
+    ///   - index: tabbar序号
+    ///   - tabBar: tabbar中的项目
     func animation(index: Int, tabBar: UITabBarItem){
         
         //缩放参数
@@ -108,9 +110,8 @@ class MainTabBarController: UITabBarController {
         tabBarSwappableImageView?.layer.add(pulse, forKey: nil)
         
         //下面被注释的两行代码表示文字和图片一起动画
-        //        let tabBarLayer = (tabbarbuttonArray[index] as AnyObject).layer
-        //        tabBarLayer?.add(pulse, forKey: nil)
-        
+//        let tabBarLayer = (tabbarbuttonArray[index] as AnyObject).layer
+//        tabBarLayer?.add(pulse, forKey: nil)
     }
     //tabbar拖动手势方法
     func drag(_ sender: UIPanGestureRecognizer) {

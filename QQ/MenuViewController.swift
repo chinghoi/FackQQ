@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MenuViewController: UIViewController {
     
     let titlesDictionary = ["激活会员", "QQ钱包", "个性装扮", "我的收藏", "我的相册", "我的文件", "免流量特权"]
     let imageDictionary = [#imageLiteral(resourceName: "sidebar_vip_shadow"), #imageLiteral(resourceName: "sidebar_purse"), #imageLiteral(resourceName: "sidebar_decoration"), #imageLiteral(resourceName: "sidebar_favorit"), #imageLiteral(resourceName: "sidebar_album"), #imageLiteral(resourceName: "sidebar_file"), #imageLiteral(resourceName: "sidebar_freetraffic")]
@@ -42,6 +42,36 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         weatherBtn.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.regular)
         weatherBtn.set(image: #imageLiteral(resourceName: "sidebar_setting"), title: "乐山", titlePosition: .bottom, additionalSpacing: 10.0, state: .normal)
     }
+    
+    @IBAction func qrInfo(_ sender: UIButton) {
+        //关闭侧边菜单后push
+        NotificationCenter.default.post(name: NSNotification.Name("IsSideMenuOpen"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name("QRInfoView"), object: nil)
+    }
+    @IBAction func setting(_ sender: UIButton) {
+        NotificationCenter.default.post(name: NSNotification.Name("IsSideMenuOpen"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name("SettingView"), object: nil)
+    }
+    
+}
+extension MenuViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        NotificationCenter.default.post(name: NSNotification.Name("IsSideMenuOpen"), object: nil)
+        
+        switch indexPath.row {
+        case 0: NotificationCenter.default.post(name: NSNotification.Name("VIPView"), object: nil)
+        case 1: NotificationCenter.default.post(name: NSNotification.Name("QQWalletView"), object: nil)
+        case 2: NotificationCenter.default.post(name: NSNotification.Name("ThemeView"), object: nil)
+        case 3: NotificationCenter.default.post(name: NSNotification.Name("CollectView"), object: nil)
+        case 4: NotificationCenter.default.post(name: NSNotification.Name("PhotoView"), object: nil)
+        case 5: NotificationCenter.default.post(name: NSNotification.Name("FileView"), object: nil)
+        case 6: NotificationCenter.default.post(name: NSNotification.Name("SpecialView"), object: nil)
+        default: break
+        }
+    }
+}
+extension MenuViewController: UITableViewDataSource {
     //表格视图中的cell个数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titlesDictionary.count
@@ -53,18 +83,22 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.textLabel?.text = titlesDictionary[indexPath.row]
         cell.imageView?.image = imageDictionary[indexPath.row]
         return cell
-    }
-    @IBAction func qrInfo(_ sender: UIButton) {
-        NotificationCenter.default.post(name: NSNotification.Name("IsSideMenuOpen"), object: nil)
-        NotificationCenter.default.post(name: NSNotification.Name("QRInfoView"), object: nil)
+        
     }
     
 }
 
-
 //图标在上文字在下按钮扩展
 extension UIButton {
     
+    /// 根据输入的参数设置按钮上图标与文字的位置
+    ///
+    /// - Parameters:
+    ///   - anImage: 设置的图标
+    ///   - title: 按钮上的标题
+    ///   - titlePosition: 标题相对图标位置
+    ///   - additionalSpacing: 图标和按钮间距
+    ///   - state: 使用指定标题的状态。 这些值在UIControlState中进行了描述
     @objc func set(image anImage: UIImage?, title: String,
                    titlePosition: UIViewContentMode, additionalSpacing: CGFloat, state: UIControlState){
         self.imageView?.contentMode = .center
